@@ -23,6 +23,7 @@
     "ext-openssl": "*",
     "ext-json": "*",
     "ext-simplexml": "*",
+    "larva/easybaidu-composer": "^1.0",
     "guzzlehttp/guzzle": "^6.2 || ^7.0",
     "monolog/monolog": "^1.22 || ^2.0",
     "overtrue/socialite": "^3.2",
