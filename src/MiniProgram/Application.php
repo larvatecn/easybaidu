@@ -15,7 +15,7 @@ class Application extends ServiceContainer
     /**
      * @var array
      */
-    protected $providers = [
+    protected array $providers = [
 
         // Base services
     ];
