@@ -12,7 +12,7 @@ use EasyBaidu\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * Get paid unionid.
+     * Get  unionid.
      *
      * @param string $openid
      * @param array $options
@@ -22,8 +22,8 @@ class Client extends BaseClient
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function getPaidUnionid($openid, array $options = [])
+    public function getUnionid($openid, array $options = [])
     {
-        return $this->httpGet('/rest/2.0/smartapp/getunionid', compact('openid') + $options);
+        return $this->httpPost('/rest/2.0/smartapp/getunionid', compact('openid') + $options);
     }
 }
