@@ -15,7 +15,7 @@ class Client extends BaseClient
     /**
      * @var string
      */
-    protected $baseUri = 'https://spapi.baidu.com';
+    protected string $baseUri = 'https://spapi.baidu.com';
 
     /**
      * Get session info by code.
@@ -29,10 +29,9 @@ class Client extends BaseClient
     public function session(string $code)
     {
         $params = [
-            'appid' => $this->app['config']['app_id'],
-            'secret' => $this->app['config']['secret'],
-            'js_code' => $code,
-            'grant_type' => 'authorization_code',
+            'client_id' => $this->app['config']['app_id'],
+            'sk' => $this->app['config']['secret'],
+            'code' => $code,
         ];
 
         return $this->httpGet('oauth/jscode2sessionkey', $params);

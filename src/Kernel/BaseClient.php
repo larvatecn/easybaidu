@@ -34,7 +34,7 @@ class BaseClient
     /**
      * @var string
      */
-    protected $baseUri;
+    protected string $baseUri;
 
     /**
      * BaseClient constructor.

@@ -34,7 +34,7 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * @var string
      */
-    protected $endpointToGetToken;
+    protected string $endpointToGetToken;
 
     /**
      * @var string
@@ -216,7 +216,7 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * @return string
      */
-    protected function getCacheKey()
+    protected function getCacheKey(): string
     {
         return $this->cachePrefix.md5(json_encode($this->getCredentials()));
     }

@@ -2,6 +2,11 @@
 
 namespace EasyBaidu;
 
+/**
+ * Class Factory.
+ *
+ * @method static \EasyBaidu\MiniProgram\Application        miniProgram(array $config)
+ */
 class Factory
 {
     /**

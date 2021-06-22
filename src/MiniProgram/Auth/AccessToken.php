@@ -13,7 +13,7 @@ class AccessToken extends BaseAccessToken
     /**
      * @var string
      */
-    protected $endpointToGetToken = 'https://openapi.baidu.com/oauth/2.0/token';
+    protected string $endpointToGetToken = 'https://openapi.baidu.com/oauth/2.0/token';
 
     /**
      * {@inheritdoc}
