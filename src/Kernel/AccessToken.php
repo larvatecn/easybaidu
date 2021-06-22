@@ -152,7 +152,7 @@ abstract class AccessToken implements AccessTokenInterface
 
     /**
      * @param array $credentials
-     * @param bool  $toArray
+     * @param bool $toArray
      *
      * @return \Psr\Http\Message\ResponseInterface|\EasyBaidu\Kernel\Support\Collection|array|object|string
      *
@@ -160,7 +160,7 @@ abstract class AccessToken implements AccessTokenInterface
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidArgumentException
      */
-    public function requestToken(array $credentials, $toArray = false)
+    public function requestToken(array $credentials, bool $toArray = false)
     {
         $response = $this->sendRequest($credentials);
         $result = json_decode($response->getBody()->getContents(), true);

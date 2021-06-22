@@ -17,6 +17,8 @@ class Application extends ServiceContainer
      */
     protected array $providers = [
         Auth\ServiceProvider::class,
+
+        Base\ServiceProvider::class,
         // Base services
     ];
 

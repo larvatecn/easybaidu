@@ -39,7 +39,7 @@ class BaseClient
     /**
      * BaseClient constructor.
      *
-     * @param \EasyBaidu\Kernel\ServiceContainer                    $app
+     * @param \EasyBaidu\Kernel\ServiceContainer $app
      * @param \EasyBaidu\Kernel\Contracts\AccessTokenInterface|null $accessToken
      */
     public function __construct(ServiceContainer $app, AccessTokenInterface $accessToken = null)
@@ -52,7 +52,7 @@ class BaseClient
      * GET request.
      *
      * @param string $url
-     * @param array  $query
+     * @param array $query
      *
      * @return \Psr\Http\Message\ResponseInterface|\EasyBaidu\Kernel\Support\Collection|array|object|string
      *
@@ -68,7 +68,7 @@ class BaseClient
      * POST request.
      *
      * @param string $url
-     * @param array  $data
+     * @param array $data
      *
      * @return \Psr\Http\Message\ResponseInterface|\EasyBaidu\Kernel\Support\Collection|array|object|string
      *
@@ -84,8 +84,8 @@ class BaseClient
      * JSON request.
      *
      * @param string $url
-     * @param array  $data
-     * @param array  $query
+     * @param array $data
+     * @param array $query
      *
      * @return \Psr\Http\Message\ResponseInterface|\EasyBaidu\Kernel\Support\Collection|array|object|string
      *
@@ -101,9 +101,9 @@ class BaseClient
      * Upload file.
      *
      * @param string $url
-     * @param array  $files
-     * @param array  $form
-     * @param array  $query
+     * @param array $files
+     * @param array $form
+     * @param array $query
      *
      * @return \Psr\Http\Message\ResponseInterface|\EasyBaidu\Kernel\Support\Collection|array|object|string
      *
@@ -117,7 +117,7 @@ class BaseClient
 
         if (isset($form['filename'])) {
             $headers = [
-                'Content-Disposition' => 'form-data; name="media"; filename="'.$form['filename'].'"'
+                'Content-Disposition' => 'form-data; name="media"; filename="' . $form['filename'] . '"'
             ];
         }
 
@@ -163,8 +163,8 @@ class BaseClient
     /**
      * @param string $url
      * @param string $method
-     * @param array  $options
-     * @param bool   $returnRaw
+     * @param array $options
+     * @param bool $returnRaw
      *
      * @return \Psr\Http\Message\ResponseInterface|\EasyBaidu\Kernel\Support\Collection|array|object|string
      *
@@ -187,7 +187,7 @@ class BaseClient
     /**
      * @param string $url
      * @param string $method
-     * @param array  $options
+     * @param array $options
      *
      * @return \EasyBaidu\Kernel\Http\Response
      *
