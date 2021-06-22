@@ -21,7 +21,7 @@ class AccessToken extends BaseAccessToken
     protected function getCredentials(): array
     {
         return [
-            'grant_type' => 'client_credential',
+            'grant_type' => 'client_credentials',
             'client_id' => $this->app['config']['app_id'],
             'client_secret' => $this->app['config']['secret'],
             'scope' => 'smartapp_snsapi_base'

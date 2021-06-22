@@ -29,7 +29,7 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * @var string
      */
-    protected $requestMethod = 'GET';
+    protected string $requestMethod = 'GET';
 
     /**
      * @var string
@@ -112,7 +112,7 @@ abstract class AccessToken implements AccessTokenInterface
 
     /**
      * @param string $token
-     * @param int    $lifetime
+     * @param int $lifetime
      *
      * @return \EasyBaidu\Kernel\Contracts\AccessTokenInterface
      *
@@ -167,7 +167,7 @@ abstract class AccessToken implements AccessTokenInterface
         $formatted = $this->castResponseToType($response, $this->app['config']->get('response_type'));
 
         if (empty($result[$this->tokenKey])) {
-            throw new HttpException('Request access_token fail: '.json_encode($result, JSON_UNESCAPED_UNICODE), $response, $formatted);
+            throw new HttpException('Request access_token fail: ' . json_encode($result, JSON_UNESCAPED_UNICODE), $response, $formatted);
         }
 
         return $toArray ? $result : $formatted;
@@ -175,7 +175,7 @@ abstract class AccessToken implements AccessTokenInterface
 
     /**
      * @param \Psr\Http\Message\RequestInterface $request
-     * @param array                              $requestOptions
+     * @param array $requestOptions
      *
      * @return \Psr\Http\Message\RequestInterface
      *
@@ -218,7 +218,7 @@ abstract class AccessToken implements AccessTokenInterface
      */
     protected function getCacheKey(): string
     {
-        return $this->cachePrefix.md5(json_encode($this->getCredentials()));
+        return $this->cachePrefix . md5(json_encode($this->getCredentials()));
     }
 
     /**
