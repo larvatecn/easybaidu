@@ -31,6 +31,7 @@ class BaseClient
      * @var \EasyBaidu\Kernel\Contracts\AccessTokenInterface|null
      */
     protected $accessToken = null;
+
     /**
      * @var string
      */
