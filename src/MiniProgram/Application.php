@@ -19,6 +19,7 @@ class Application extends ServiceContainer
         TemplateMessage\ServiceProvider::class,
         Base\ServiceProvider::class,
         SubscribeMessage\ServiceProvider::class,
+        Sitemap\ServiceProvider::class,
     ];
 
     /**
@@ -34,7 +35,7 @@ class Application extends ServiceContainer
      * Handle dynamic calls.
      *
      * @param string $method
-     * @param array  $args
+     * @param array $args
      *
      * @return mixed
      */
