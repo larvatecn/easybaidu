@@ -29,12 +29,12 @@ abstract class AccessToken implements AccessTokenInterface
     /**
      * @var string
      */
-    protected string $requestMethod = 'GET';
+    protected $requestMethod = 'GET';
 
     /**
      * @var string
      */
-    protected string $endpointToGetToken;
+    protected $endpointToGetToken;
 
     /**
      * @var string

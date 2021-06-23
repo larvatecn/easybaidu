@@ -15,15 +15,13 @@ class Client extends BaseClient
     /**
      * @var string
      */
-    protected string $baseUri = 'https://spapi.baidu.com/';
+    protected $baseUri = 'https://spapi.baidu.com/';
 
     /**
      * Get session info by code.
      *
      * @param string $code
-     *
      * @return \Psr\Http\Message\ResponseInterface|\EasyBaidu\Kernel\Support\Collection|array|object|string
-     *
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      */
     public function session(string $code)
@@ -33,7 +31,6 @@ class Client extends BaseClient
             'sk' => $this->app['config']['secret'],
             'code' => $code,
         ];
-
         return $this->httpGet('oauth/jscode2sessionkey', $params);
     }
 }

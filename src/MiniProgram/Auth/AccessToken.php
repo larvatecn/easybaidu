@@ -13,7 +13,7 @@ class AccessToken extends BaseAccessToken
     /**
      * @var string
      */
-    protected string $endpointToGetToken = 'https://openapi.baidu.com/oauth/2.0/token';
+    protected $endpointToGetToken = 'https://openapi.baidu.com/oauth/2.0/token';
 
     /**
      * {@inheritdoc}
@@ -22,7 +22,7 @@ class AccessToken extends BaseAccessToken
     {
         return [
             'grant_type' => 'client_credentials',
-            'client_id' => $this->app['config']['app_id'],
+            'client_id' => $this->app['config']['app_key'],
             'client_secret' => $this->app['config']['secret'],
             'scope' => 'smartapp_snsapi_base'
         ];

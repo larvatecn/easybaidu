@@ -57,7 +57,7 @@ class Client extends BaseClient
     protected function getStream(string $endpoint, array $params)
     {
         $response = $this->requestRaw($endpoint, 'POST', ['form_params' => $params]);
-        if (false !== stripos($response->getHeaderLine('Content-disposition'), 'attachment')) {
+        if (false !== stripos($response->getHeaderLine('Content-Type'), 'image/png')) {
             return StreamResponse::buildFromPsrResponse($response);
         }
         return $this->castResponseToType($response, $this->app['config']->get('response_type'));

@@ -6,6 +6,14 @@ use EasyBaidu\Kernel\ServiceContainer;
 
 /**
  * 小程序应用入口
+ * @property \EasyBaidu\MiniProgram\Auth\AccessToken $access_token
+ * @property \EasyBaidu\MiniProgram\AppCode\Client $app_code
+ * @property \EasyBaidu\MiniProgram\Auth\Client $auth
+ * @property \EasyBaidu\MiniProgram\Encryptor $encryptor
+ * @property \EasyBaidu\MiniProgram\TemplateMessage\Client $template_message
+ * @property \EasyBaidu\MiniProgram\Sitemap\Client $sitemap
+ * @property \EasyBaidu\MiniProgram\SubscribeMessage\Client $subscribe_message
+ *
  * @author Tongle Xu <xutongle@gmail.com>
  */
 class Application extends ServiceContainer
