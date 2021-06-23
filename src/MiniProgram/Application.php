@@ -5,10 +5,8 @@ namespace EasyBaidu\MiniProgram;
 use EasyBaidu\Kernel\ServiceContainer;
 
 /**
- * Class Application.
- *
- * @author mingyoung <mingyoungcheung@gmail.com>
- *
+ * 小程序应用入口
+ * @author Tongle Xu <xutongle@gmail.com>
  */
 class Application extends ServiceContainer
 {
@@ -17,11 +15,10 @@ class Application extends ServiceContainer
      */
     protected $providers = [
         Auth\ServiceProvider::class,
+        AppCode\ServiceProvider::class,
         TemplateMessage\ServiceProvider::class,
-
         Base\ServiceProvider::class,
         SubscribeMessage\ServiceProvider::class,
-        // Base services
     ];
 
     /**
@@ -32,7 +29,6 @@ class Application extends ServiceContainer
             'base_uri' => 'https://openapi.baidu.com/',
         ],
     ];
-
 
     /**
      * Handle dynamic calls.
