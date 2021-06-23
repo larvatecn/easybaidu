@@ -12,7 +12,7 @@ use EasyBaidu\Kernel\BaseClient;
 class Client extends BaseClient
 {
     /**
-     * Get  unionid.
+     * Get unionid.
      *
      * @param string $openid
      * @param array $options
