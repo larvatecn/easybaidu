@@ -11,6 +11,7 @@ use EasyBaidu\Kernel\ServiceContainer;
  * @property \EasyBaidu\MiniProgram\Auth\Client $auth
  * @property \EasyBaidu\MiniProgram\Encryptor $encryptor
  * @property \EasyBaidu\MiniProgram\TemplateMessage\Client $template_message
+ * @property \EasyBaidu\MiniProgram\Resource\Client $resource
  * @property \EasyBaidu\MiniProgram\Sitemap\Client $sitemap
  * @property \EasyBaidu\MiniProgram\SubscribeMessage\Client $subscribe_message
  *
@@ -25,6 +26,7 @@ class Application extends ServiceContainer
         Auth\ServiceProvider::class,
         AppCode\ServiceProvider::class,
         TemplateMessage\ServiceProvider::class,
+        Resource\ServiceProvider::class,
         Base\ServiceProvider::class,
         SubscribeMessage\ServiceProvider::class,
         Sitemap\ServiceProvider::class,
