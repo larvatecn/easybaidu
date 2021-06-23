@@ -16,15 +16,19 @@ class Client extends BaseClient
      * @param string $title 文章标题，限定8-40个中英文字符以内
      * @param string $content 正文内容，限制20000个中英文字符内，富文本
      * @param string $origin_url 原文地址，相同URL的文章会被认为是同一篇文章，禁止提交
-     * @param array $cover_images 文章封面图片地址url, 0-3张封面图，封面图尺寸不小于218*146，可以为空，没有封面图的内容将会进入草稿
-     * @param int $is_original 标定是否原创，1 为原创，0 为非原创
+     * @param array $optional 其他非必须参数
      * @return array|\EasyBaidu\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function articlePublish($title, $content, $origin_url, $cover_images, $is_original = 1)
+    public function articlePublish(string $title, string $content, string $origin_url, array $optional = [])
     {
-        return $this->httpPostJson('builderinner/open/resource/article/publish', compact('title', 'content', 'origin_url', 'cover_images', 'is_original'));
+        $params = array_merge([
+            'title' => $title,
+            'content' => $content,
+            'origin_url' => $origin_url,
+        ], $optional);
+        return $this->httpPostJson('builderinner/open/resource/article/publish', $params);
     }
 
     /**
