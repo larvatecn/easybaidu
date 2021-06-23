@@ -44,7 +44,7 @@ class Client extends BaseClient
     {
         $params = $this->formatMessage($data);
         $this->restoreMessage();
-        return $this->httpPostJson('rest/2.0/smartapp/template/message/subscribe/send', $params);
+        return $this->httpPost('rest/2.0/smartapp/template/message/subscribe/send', $params);
     }
 
     /**
