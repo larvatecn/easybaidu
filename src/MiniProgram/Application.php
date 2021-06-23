@@ -27,6 +27,7 @@ class Application extends ServiceContainer
         AppCode\ServiceProvider::class,
         TemplateMessage\ServiceProvider::class,
         Resource\ServiceProvider::class,
+        RiskControl\ServiceProvider::class,
         Base\ServiceProvider::class,
         SubscribeMessage\ServiceProvider::class,
         Sitemap\ServiceProvider::class,
