@@ -15,12 +15,24 @@ class Application extends ServiceContainer
     /**
      * @var array
      */
-    protected array $providers = [
+    protected $providers = [
         Auth\ServiceProvider::class,
+        TemplateMessage\ServiceProvider::class,
 
         Base\ServiceProvider::class,
+        SubscribeMessage\ServiceProvider::class,
         // Base services
     ];
+
+    /**
+     * @var array
+     */
+    protected $defaultConfig = [
+        'http' => [
+            'base_uri' => 'https://openapi.baidu.com/',
+        ],
+    ];
+
 
     /**
      * Handle dynamic calls.

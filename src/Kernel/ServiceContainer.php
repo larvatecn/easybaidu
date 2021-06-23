@@ -29,22 +29,22 @@ class ServiceContainer extends Container
     /**
      * @var string
      */
-    protected ?string $id;
+    protected $id;
 
     /**
      * @var array
      */
-    protected array $providers = [];
+    protected $providers = [];
 
     /**
      * @var array
      */
-    protected array $defaultConfig = [];
+    protected $defaultConfig = [];
 
     /**
      * @var array
      */
-    protected array $userConfig = [];
+    protected $userConfig = [];
 
     /**
      * Constructor.
