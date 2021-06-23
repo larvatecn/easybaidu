@@ -5,13 +5,14 @@ namespace EasyBaidu;
 /**
  * Class Factory.
  *
+ * @method static \EasyBaidu\OfficialAccount\Application        officialAccount(array $config)
  * @method static \EasyBaidu\MiniProgram\Application        miniProgram(array $config)
  */
 class Factory
 {
     /**
      * @param string $name
-     * @param array  $config
+     * @param array $config
      *
      * @return \EasyBaidu\Kernel\ServiceContainer
      */
@@ -27,7 +28,7 @@ class Factory
      * Dynamically pass methods to the application.
      *
      * @param string $name
-     * @param array  $arguments
+     * @param array $arguments
      *
      * @return mixed
      */

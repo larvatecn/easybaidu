@@ -1,14 +1,14 @@
 <?php
 
-namespace EasyBaidu\OpenPlatform;
+namespace EasyBaidu\OfficialAccount;
 
 use EasyBaidu\Kernel\ServiceContainer;
 
 /**
  * Class Application
- * @property \EasyBaidu\OpenPlatform\Comment\Client $comment
- * @property \EasyBaidu\OpenPlatform\Content\Client $content
- * @property \EasyBaidu\OpenPlatform\User\Client $user
+ * @property \EasyBaidu\OfficialAccount\Comment\Client $comment
+ * @property \EasyBaidu\OfficialAccount\Content\Client $content
+ * @property \EasyBaidu\OfficialAccount\User\Client $user
  *
  * @author Tongle Xu <xutongle@gmail.com>
  */

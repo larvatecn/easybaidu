@@ -5,8 +5,9 @@
  * @link http://www.larva.com.cn/
  */
 
-namespace EasyBaidu\OpenPlatform\Content;
+namespace EasyBaidu\OfficialAccount\User;
 
+use EasyBaidu\Kernel\BaseClient;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 

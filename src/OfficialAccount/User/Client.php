@@ -5,9 +5,9 @@
  * @link http://www.larva.com.cn/
  */
 
-namespace EasyBaidu\OpenPlatform\User;
+namespace EasyBaidu\OfficialAccount\User;
 
-use EasyBaidu\OpenPlatform\BaseClient;
+use EasyBaidu\OfficialAccount\BaseClient;
 
 class Client extends BaseClient
 {

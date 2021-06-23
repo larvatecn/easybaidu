@@ -5,7 +5,7 @@
  * @link http://www.larva.com.cn/
  */
 
-namespace EasyBaidu\OpenPlatform\Comment;
+namespace EasyBaidu\OfficialAccount\Comment;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;

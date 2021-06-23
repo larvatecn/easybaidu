@@ -5,7 +5,7 @@
  * @link http://www.larva.com.cn/
  */
 
-namespace EasyBaidu\OpenPlatform;
+namespace EasyBaidu\OfficialAccount;
 
 use EasyBaidu\Kernel\ServiceContainer;
 
