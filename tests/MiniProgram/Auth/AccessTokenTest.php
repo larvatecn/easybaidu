@@ -17,7 +17,7 @@ class AccessTokenTest extends TestCase
         $token = \Mockery::mock(AccessToken::class, [$app])->makePartial()->shouldAllowMockingProtectedMethods();
 
         $this->assertSame([
-            'grant_type' => 'client_credential',
+            'grant_type' => 'client_credentials',
             'client_id' => 'mock-app-id',
             'client_secret' => 'mock-secret',
             'scope' => 'smartapp_snsapi_base'

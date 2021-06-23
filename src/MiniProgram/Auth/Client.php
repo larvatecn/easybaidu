@@ -15,7 +15,7 @@ class Client extends BaseClient
     /**
      * @var string
      */
-    protected string $baseUri = 'https://spapi.baidu.com';
+    protected string $baseUri = 'https://spapi.baidu.com/';
 
     /**
      * Get session info by code.
