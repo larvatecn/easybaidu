@@ -66,13 +66,11 @@ class BaseClient
         $params = array_filter(array_merge($base, $this->prepends(), $params), 'strlen');
 
         $options = array_merge([
-            'body' => $params,
+            'json' => $params,
         ], $options);
 
         $this->pushMiddleware($this->logMiddleware(), 'log');
-
         $response = $this->performRequest($endpoint, $method, $options);
-
         return $returnResponse ? $response : $this->castResponseToType($response, $this->app->config->get('response_type'));
     }
 
@@ -95,18 +93,15 @@ class BaseClient
      * @param array $params
      * @param string $method
      * @param array $options
-     *
      * @return ResponseInterface
-     *
-     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
-     * @throws \EasyWeChat\Kernel\Exceptions\InvalidArgumentException
+     * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
+     * @throws \EasyBaidu\Kernel\Exceptions\InvalidArgumentException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function requestRaw(string $endpoint, array $params = [], $method = 'post', array $options = [])
     {
         /** @var ResponseInterface $response */
         $response = $this->request($endpoint, $params, $method, $options, true);
-
         return $response;
     }
 
@@ -117,17 +112,14 @@ class BaseClient
      * @param array $params
      * @param string $method
      * @param array $options
-     *
      * @return array
-     *
-     * @throws \EasyWeChat\Kernel\Exceptions\InvalidArgumentException
-     * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
+     * @throws \EasyBaidu\Kernel\Exceptions\InvalidArgumentException
+     * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function requestArray(string $endpoint, array $params = [], $method = 'post', array $options = []): array
     {
         $response = $this->requestRaw($endpoint, $params, $method, $options);
-
         return $this->castResponseToType($response, 'array');
     }
 

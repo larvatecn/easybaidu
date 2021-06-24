@@ -166,13 +166,12 @@ class BaseClient
      * @param string $method
      * @param array $options
      * @param bool $returnRaw
-     *
      * @return \Psr\Http\Message\ResponseInterface|\EasyBaidu\Kernel\Support\Collection|array|object|string
      *
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function request(string $url, string $method = 'GET', array $options = [], $returnRaw = false)
+    public function request(string $url, string $method = 'GET', array $options = [], bool $returnRaw = false)
     {
         if (empty($this->middlewares)) {
             $this->registerHttpMiddlewares();

@@ -7,7 +7,7 @@
 
 namespace EasyBaidu\OfficialAccount\Content;
 
-use EasyBaidu\OfficialAccount\BaseClient;
+use EasyBaidu\OfficialAccount\Kernel\BaseClient;
 
 class Client extends BaseClient
 {

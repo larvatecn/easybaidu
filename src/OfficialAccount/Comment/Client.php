@@ -7,14 +7,14 @@
 
 namespace EasyBaidu\OfficialAccount\Comment;
 
-use EasyBaidu\OfficialAccount\BaseClient;
+use EasyBaidu\OfficialAccount\Kernel\BaseClient;
 
 class Client extends BaseClient
 {
     /**
      * 获取作者评论列表
-     * @param int $offset 不传默认从第一条开始取，分页查询时请传入上一次查询返回的offset+1
-     * @param int $limit 查询条数，不传默认为20，不能超过20
+     * @param string|int $offset 不传默认从第一条开始取，分页查询时请传入上一次查询返回的offset+1
+     * @param string|int $limit 查询条数，不传默认为20，不能超过20
      * @return array|\EasyBaidu\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -26,8 +26,8 @@ class Client extends BaseClient
 
     /**
      * 获取文章评论统计
-     * @param int $page_no 查询页码，不传默认为1
-     * @param int $page_size 查询条数，不能超过30，不传默认为30
+     * @param string|int $page_no 查询页码，不传默认为1
+     * @param string|int $page_size 查询条数，不能超过30，不传默认为30
      * @return array|\EasyBaidu\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -40,8 +40,8 @@ class Client extends BaseClient
     /**
      * 获取单篇文章评论
      * @param string $article_id 文章id，可以从文章列表或评论其他接口获取
-     * @param int $page_no 查询页码，不传默认为1
-     * @param int $page_size 查询条数，不能超过20，不传默认为20
+     * @param string|int $page_no 查询页码，不传默认为1
+     * @param string|int $page_size 查询条数，不能超过20，不传默认为20
      * @return array|\EasyBaidu\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
@@ -55,8 +55,8 @@ class Client extends BaseClient
      * 获取文章评论回复
      * @param string $article_id 文章id，可以从文章列表或评论其他接口获取
      * @param string $reply_id 被回复的评论的id，可以从文章列表或者评论其他接口获取
-     * @param int $page_no 查询页码，不传默认为1
-     * @param int $page_size 查询条数，不能超过20，不传默认为20
+     * @param string|int $page_no 查询页码，不传默认为1
+     * @param string|int $page_size 查询条数，不能超过20，不传默认为20
      * @return array|\EasyBaidu\Kernel\Support\Collection|object|\Psr\Http\Message\ResponseInterface|string
      * @throws \EasyBaidu\Kernel\Exceptions\InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
