@@ -21,7 +21,7 @@ class Client extends BaseClient
      */
     public function authorListall($offset = 1, $limit = 20)
     {
-        return $this->httpPostJson('builderinner/open/resource/query/commentAuthorListall', compact('offset', 'limit'));
+        return $this->request('builderinner/open/resource/query/commentAuthorListall', compact('offset', 'limit'));
     }
 
     /**
@@ -34,7 +34,7 @@ class Client extends BaseClient
      */
     public function articleListAll($page_no = 1, $page_size = 30)
     {
-        return $this->httpPostJson('builderinner/open/resource/query/commentArticleListall', compact('page_no', 'page_size'));
+        return $this->request('builderinner/open/resource/query/commentArticleListall', compact('page_no', 'page_size'));
     }
 
     /**
@@ -48,7 +48,7 @@ class Client extends BaseClient
      */
     public function articleCommentList($article_id, $page_no = 1, $page_size = 20)
     {
-        return $this->httpPostJson('builderinner/open/resource/query/articleCommentList', compact('article_id', 'page_no', 'page_size'));
+        return $this->request('builderinner/open/resource/query/articleCommentList', compact('article_id', 'page_no', 'page_size'));
     }
 
     /**
@@ -63,6 +63,6 @@ class Client extends BaseClient
      */
     public function articleCommentReplyList($article_id, $reply_id, $page_no = 1, $page_size = 20)
     {
-        return $this->httpPostJson('builderinner/open/resource/query/articleCommentReplyList', compact('article_id', 'reply_id', 'page_no', 'page_size'));
+        return $this->request('builderinner/open/resource/query/articleCommentReplyList', compact('article_id', 'reply_id', 'page_no', 'page_size'));
     }
 }

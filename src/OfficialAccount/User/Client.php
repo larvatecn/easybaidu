@@ -21,7 +21,7 @@ class Client extends BaseClient
      */
     public function fansListall($page_no = 1, $page_size = 30)
     {
-        return $this->httpPostJson('builderinner/open/resource/query/fansListall', compact('page_no', 'page_size'));
+        return $this->request('builderinner/open/resource/query/fansListall', compact('page_no', 'page_size'));
     }
 
     /**
@@ -33,6 +33,6 @@ class Client extends BaseClient
      */
     public function fansData($uk)
     {
-        return $this->httpPostJson('builderinner/open/resource/query/fansData', compact('uk'));
+        return $this->request('builderinner/open/resource/query/fansData', compact('uk'));
     }
 }

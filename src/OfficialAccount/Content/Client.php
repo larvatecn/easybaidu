@@ -28,7 +28,7 @@ class Client extends BaseClient
             'content' => $content,
             'origin_url' => $origin_url,
         ], $optional);
-        return $this->httpPostJson('builderinner/open/resource/article/publish', $params);
+        return $this->request('builderinner/open/resource/article/publish', $params);
     }
 
     /**
@@ -43,7 +43,7 @@ class Client extends BaseClient
      */
     public function articleRepublish($title, $content, $origin_url, $cover_images, $article_id)
     {
-        return $this->httpPostJson('builderinner/open/resource/article/republish', compact('title', 'content', 'origin_url', 'cover_images', 'article_id'));
+        return $this->request('builderinner/open/resource/article/republish', compact('title', 'content', 'origin_url', 'cover_images', 'article_id'));
     }
 
     /**
@@ -57,7 +57,7 @@ class Client extends BaseClient
      */
     public function articleGallery($title, $photograph, $origin_url)
     {
-        return $this->httpPostJson('builderinner/open/resource/article/gallery', compact('title', 'photograph', 'origin_url'));
+        return $this->request('builderinner/open/resource/article/gallery', compact('title', 'photograph', 'origin_url'));
     }
 
     /**
@@ -74,7 +74,7 @@ class Client extends BaseClient
      */
     public function videoPublish($title, $video_url, $cover_images, $use_auto_cover, $is_original, $tag)
     {
-        return $this->httpPostJson('builderinner/open/resource/video/publish', compact('title', 'video_url', 'cover_images', 'use_auto_cover', 'is_original', 'tag'));
+        return $this->request('builderinner/open/resource/video/publish', compact('title', 'video_url', 'cover_images', 'use_auto_cover', 'is_original', 'tag'));
     }
 
     /**
@@ -86,7 +86,7 @@ class Client extends BaseClient
      */
     public function imagePush($image_list)
     {
-        return $this->httpPostJson('builderinner/open/resource/image/pushPic', compact('image_list'));
+        return $this->request('builderinner/open/resource/image/pushPic', compact('image_list'));
     }
 
     /**
@@ -98,7 +98,7 @@ class Client extends BaseClient
      */
     public function articleWithdraw($article_id)
     {
-        return $this->httpPostJson('builderinner/open/resource/article/withdraw', compact('article_id'));
+        return $this->request('builderinner/open/resource/article/withdraw', compact('article_id'));
     }
 
     /**
@@ -127,7 +127,7 @@ class Client extends BaseClient
         if ($collection) {
             $data['collection'] = $collection;
         }
-        return $this->httpPostJson('builderinner/open/resource/query/articleListall', $data);
+        return $this->request('builderinner/open/resource/query/articleListall', $data);
     }
 
     /**
@@ -139,7 +139,7 @@ class Client extends BaseClient
      */
     public function status($article_id)
     {
-        return $this->httpPostJson('builderinner/open/resource/query/status', compact('article_id'));
+        return $this->request('builderinner/open/resource/query/status', compact('article_id'));
     }
 
     /**
@@ -151,6 +151,6 @@ class Client extends BaseClient
      */
     public function articleStatistics($article_id)
     {
-        return $this->httpPostJson('builderinner/open/resource/query/articleStatistics', compact('article_id'));
+        return $this->request('builderinner/open/resource/query/articleStatistics', compact('article_id'));
     }
 }
